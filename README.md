@@ -3,7 +3,7 @@
 Este repositório contém dois projetos:
 
 - **Backend (server-shopping-list)**: Aplicação desenvolvida com [NestJS](https://nestjs.com/) e [TypeORM](https://typeorm.io/), integrando com um banco de dados PostgreSQL.
-- **Frontend (project SOUV)**: Aplicação desenvolvida com [Next.js](https://nextjs.org/), Zustand e React Query que consome a API do backend.
+- **Frontend (project SOUV)**: Aplicação responsiva desenvolvida com [Next.js](https://nextjs.org/), Zustand e React Query que consome a API do backend.
 
 ---
 
