@@ -9,19 +9,19 @@ import { useEffect, useState } from 'react';
 export default function ShoppingListPage() {
   const { data, isLoading, isError, refetch } = useShoppingItemsServiceGetItemsQuery();
 
-    const [windowWidth, setWindowWidth] = useState(0);
+  const [windowWidth, setWindowWidth] = useState(0);
 
-    useEffect(() => {
-      const handleResize = () => {
-        setWindowWidth(window.innerWidth);
-      };
-  
-      window.addEventListener('resize', handleResize);
-  
-      handleResize();
-  
-      return () => window.removeEventListener('resize', handleResize);
-    }, []);
+  useEffect(() => {
+    const handleResize = () => {
+      setWindowWidth(window.innerWidth);
+    };
+
+    window.addEventListener('resize', handleResize);
+
+    handleResize();
+
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
 
   const backgroundStyles = {
     backgroundImage: "url('/images/background.jpg')",
@@ -42,16 +42,16 @@ export default function ShoppingListPage() {
           </h1>
         </header>
         <main>
-        {isLoading ? (
-          <Loading />
-        ) : isError ? (
-          <ErrorComponent refetch={refetch}/>
-        ) : (
-          <>
-            <Form refetch={refetch}/>
-            <ItemsBox items={data} refetch={refetch} />
-          </>
-        )}
+          {isLoading ? (
+            <Loading />
+          ) : isError ? (
+            <ErrorComponent refetch={refetch} />
+          ) : (
+            <>
+              <Form refetch={refetch} />
+              <ItemsBox items={data} refetch={refetch} />
+            </>
+          )}
         </main>
       </div>
     </div>

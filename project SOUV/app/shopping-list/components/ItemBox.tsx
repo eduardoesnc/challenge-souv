@@ -11,7 +11,10 @@ import { MoreVertical, Pencil, Trash2 } from 'lucide-react';
 import { useShoppingStore } from '@/store/useShoppingStore';
 import { ShoppingItem } from '@/types/ShoppingItem.type';
 import { getCategoryIcon } from '@/lib/constants';
-import { useShoppingItemServiceRemoveItemMutate, useShoppingItemServiceUpdateItemMutate } from '@/queries/shoppingItem.query';
+import {
+  useShoppingItemServiceRemoveItemMutate,
+  useShoppingItemServiceUpdateItemMutate,
+} from '@/queries/shoppingItem.query';
 import { toast } from 'sonner';
 
 interface ItemsBoxProps {
@@ -62,7 +65,7 @@ const ItemsBox: React.FC<ItemsBoxProps> = ({ items = [], refetch }) => {
   };
 
   const handleRemoveItem = (id: string) => {
-    removeItem({id});
+    removeItem({ id });
   };
 
   const handleToggleItemCompletion = (item: ShoppingItem) => {
@@ -121,7 +124,10 @@ const ItemsBox: React.FC<ItemsBoxProps> = ({ items = [], refetch }) => {
                     <MoreVertical className='h-5 w-5 text-purpleLight' />
                   </Button>
                 </DropdownMenuTrigger>
-                <DropdownMenuContent align='end' className='border-customGray-300 bg-customGray-400'>
+                <DropdownMenuContent
+                  align='end'
+                  className='border-customGray-300 bg-customGray-400'
+                >
                   <DropdownMenuItem
                     onClick={() => startEditing(item)}
                     className='rounded-none border-b border-customGray-300 font-inter text-sm text-customGray-100 focus:bg-customGray-300 focus:text-customGray-100'

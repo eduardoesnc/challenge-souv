@@ -1,9 +1,8 @@
 import { categories, units } from '@/lib/constants';
-import { ShoppingItem } from '@/types/ShoppingItem.type';
 import { ShoppingStore } from '@/types/store/ShoppingStore.type';
 import { create } from 'zustand';
 
-export const useShoppingStore = create<ShoppingStore>((set) => ({
+export const useShoppingStore = create<ShoppingStore>(set => ({
   items: [],
   formData: {
     name: '',

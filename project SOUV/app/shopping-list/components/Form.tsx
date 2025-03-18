@@ -7,18 +7,14 @@ import { categories, units } from '@/lib/constants';
 import { InputWithSelect } from '@/components/InputWithSelect';
 import { Select } from '@/components/Select';
 import { toast } from 'sonner';
-import { useShoppingItemServiceCreateItemMutate, useShoppingItemServiceUpdateItemMutate } from '@/queries/shoppingItem.query';
+import {
+  useShoppingItemServiceCreateItemMutate,
+  useShoppingItemServiceUpdateItemMutate,
+} from '@/queries/shoppingItem.query';
 
 const Form: React.FC<{ refetch: () => void }> = ({ refetch }) => {
-  const {
-    formData,
-    isEditing,
-    editingId,
-    setFormData,
-    setIsEditing,
-    setEditingId,
-    resetFormData,
-  } = useShoppingStore();
+  const { formData, isEditing, editingId, setFormData, setIsEditing, setEditingId, resetFormData } =
+    useShoppingStore();
 
   const { mutate: createNewItem } = useShoppingItemServiceCreateItemMutate({
     onSuccess: () => {
