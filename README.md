@@ -13,7 +13,6 @@ Este repositório contém dois projetos:
 - [Configuração do Ambiente](#configuração-do-ambiente)
   - [Backend](#backend)
   - [Frontend](#frontend)
-- [Comandos Úteis](#comandos-úteis)
 - [Considerações Finais](#considerações-finais)
 
 ---
